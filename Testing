@@ -1,0 +1,8 @@
+import { render, screen } from '@testing-library/react';
+import DatePicker from '../components/DatePicker';
+
+test('renders DatePicker component', () => {
+  render(<DatePicker />);
+  const linkElement = screen.getByText(/Recurring Date Picker/i);
+  expect(linkElement).toBeInTheDocument();
+});
