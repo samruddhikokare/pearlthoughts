@@ -1,0 +1,12 @@
+import create from 'zustand';
+
+const useDateStore = create((set) => ({
+  recurrencePattern: 'daily',
+  startDate: null,
+  endDate: null,
+  customRecurrence: {},
+  setRecurrencePattern: (pattern) => set({ recurrencePattern: pattern }),
+  setStartDate: (date) => set({ startDate: date }),
+  setEndDate: (date) => set({ endDate: date }),
+  setCustomRecurrence: (custom) => set({ customRecurrence: custom }),
+}));
